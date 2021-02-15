@@ -1,6 +1,6 @@
 import React from 'react'
-// import { Post } from "./Post";
-// import { InfoPost } from "./InfoPost";
+import { Post } from "./Post";
+import { InfoPost } from "./InfoPost";
 
 import fetch from 'node-fetch'
 
@@ -62,14 +62,14 @@ export class ListPosts extends React.Component <PostsProps, PostsState> {
           <ul >
           { posts.map(post => (
               <li key={post.id} style={{border: '1px solid grey'}}>
-                {/* <Post post={post} onClick={this.onClick} /> */}
+                <Post post={post} onClick={this.onClick} />
               </li>
           ))}
         </ul>
         </div>
           
         <div style={{width: '40%', float: 'right', marginLeft: 20, border: '1px solid grey'}}>
-          {/* <InfoPost posts={posts} post={post} /> */}
+          <InfoPost posts={posts} post={post} />
         </div>
       </div>           
     </React.Fragment>
