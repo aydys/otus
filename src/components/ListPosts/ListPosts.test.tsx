@@ -3,17 +3,38 @@ import { shallow } from "enzyme";
 import { ListPosts } from "./ListPosts";
 
 describe('ListPosts', () => {
+  
+  const initialState = {
+    posts: [
+      {
+        id: 1,
+        title: 'Some Title'
+      }
+    ],
+    post: {
+      title: '',
+      id: 1,
+      body: ''
+    }
+  }
 
   const wrapper = shallow(<ListPosts />)
   it('layout dom elements (snapshot', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
+  it('initial state of component', () => {
+    wrapper.setState(initialState);
+    console.log(wrapper.state())
+    expect(wrapper.state()).toEqual(initialState);
+  })
+
   it('exist Post component', () => {
     console.log(wrapper.debug())
-    // expect(wrapper.find('Post')).toHaveLength(1);
+    wrapper.setState(initialState);
+    expect(wrapper.find('Post')).toHaveLength(initialState.posts.length);
   })
   it('exist InfoPost component', () => {
-
+    expect(wrapper.find('InfoPost')).toHaveLength(1);
   })
 })
