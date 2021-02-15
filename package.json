@@ -57,6 +57,7 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
+    "node-fetch": "^2.6.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   },
