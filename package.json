@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aydys/game_of_life.git"
+    "url": "git+https://github.com/aydys/otus.git"
   },
   "keywords": [
     "celluar",
@@ -21,9 +21,9 @@
   "author": "Aidys Dongak",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/aydys/game_of_life/issues"
+    "url": "https://github.com/aydys/otus/issues"
   },
-  "homepage": "https://github.com/aydys/game_of_life#readme",
+  "homepage": "https://github.com/aydys/otus#readme",
   "devDependencies": {
     "@babel/cli": "^7.12.10",
     "@babel/core": "^7.12.10",
