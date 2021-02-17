@@ -1,12 +1,31 @@
-import React from 'react'
+import React from "react";
 
 type Props = {
-  posts: any[],
-  post: {}
+  post: {
+    title: string,
+    id: number,
+    body: string
+  }
 }
 
-export class InfoPost extends React.Component<Props> {
+export class InfoPost extends React.Component< Props, {}> {
+
+  shouldComponentUpdate(nextProps: Props): boolean {
+    return nextProps.post.id !== this.props.post.id
+  }
+
+  componentDidUpdate(prevProps: Props) {
+    if(prevProps.post !== this.props.post) {
+      this.forceUpdate();
+    }
+  }
+  
   render() {
-    return <div>InfoPost</div>
+    const {post} = this.props;
+
+    return <>
+      <h4>{post.title}</h4>
+      <p>{post.body}</p>
+    </>
   }
 }

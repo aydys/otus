@@ -69,7 +69,7 @@ export class ListPosts extends React.Component <PostsProps, PostsState> {
         </div>
           
         <div style={{width: '40%', float: 'right', marginLeft: 20, border: '1px solid grey'}}>
-          <InfoPost posts={posts} post={post} />
+          <InfoPost post={post} />
         </div>
       </div>           
     </React.Fragment>
