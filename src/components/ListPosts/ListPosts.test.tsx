@@ -25,12 +25,10 @@ describe('ListPosts', () => {
 
   it('initial state of component', () => {
     wrapper.setState(initialState);
-    console.log(wrapper.state())
     expect(wrapper.state()).toEqual(initialState);
   })
 
   it('exist Post component', () => {
-    console.log(wrapper.debug())
     wrapper.setState(initialState);
     expect(wrapper.find('Post')).toHaveLength(initialState.posts.length);
   })

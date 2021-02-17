@@ -1,12 +1,21 @@
-import React from "react";
+ import React from "react";
 
-type Props = {
-  post: {},
+interface PostProps {
+  post: {
+    title: string,
+    body: string,
+    id: number
+  },
   onClick: (id: number) => void
 }
 
-export class Post extends React.Component<Props> {
+export class Post extends React.Component  <PostProps, unknown> {
+  
   render() {
-    return <div>Post</div>
+    const { post, onClick } = this.props;
+    return <div>
+      <h4>{post.title}</h4>
+      <button onClick={() => onClick(post.id)}>Load</button>
+    </div>
   }
 }

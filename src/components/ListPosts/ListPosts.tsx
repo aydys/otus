@@ -2,7 +2,7 @@ import React from 'react'
 import { Post } from "./Post";
 import { InfoPost } from "./InfoPost";
 
-// import fetch from 'node-fetch'
+import fetch from 'node-fetch'
 
 type PostsProps = {}
 
