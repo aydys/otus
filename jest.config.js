@@ -4,5 +4,6 @@ module.exports = {
   transform: {
     "^.+\\.(js|jsx|ts|tsx)$": "<rootDir>/node_modules/babel-jest",
   },
-  setupFilesAfterEnv: ["<rootDir>/test-setup.js"]
+  setupFilesAfterEnv: ["<rootDir>/test-setup.js"],
+  snapshotSerializers: ["enzyme-to-json/serializer"]
 };
