@@ -15,6 +15,12 @@ interface PostsState {
   }
 }
 
+const styled = {
+  post: {border: '1px solid grey'},
+  containerInfoPost: {width: '40%', float: 'right', marginLeft: 20, border: '1px solid grey'},
+  containerList: {width: '50%', float: 'left'}
+}
+
 export class ListPosts extends React.Component <PostsProps, PostsState> {
 
   constructor(props: PostsProps) {
@@ -58,17 +64,17 @@ export class ListPosts extends React.Component <PostsProps, PostsState> {
     return <React.Fragment>
       <h1>Posts</h1>
       <div>
-         <div style={{width: '50%', float: 'left'}}>
+         <div style={styled.containerList as React.CSSProperties}>
           <ul >
           { posts.map(post => (
-              <li key={post.id} style={{border: '1px solid grey'}}>
+              <li key={post.id} style={styled.post}>
                 <Post post={post} onClick={this.onClick} />
               </li>
           ))}
         </ul>
         </div>
           
-        <div style={{width: '40%', float: 'right', marginLeft: 20, border: '1px solid grey'}}>
+        <div style={styled.containerInfoPost as React.CSSProperties}>
           <InfoPost post={post} />
         </div>
       </div>           
