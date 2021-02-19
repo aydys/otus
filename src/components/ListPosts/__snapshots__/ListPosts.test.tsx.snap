@@ -1,3 +1,60 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ListPosts layout dom elements (snapshot 1`] = `ShallowWrapper {}`;
+exports[`ListPosts layout dom elements (snapshot 1`] = `
+<Fragment>
+  <h1>
+    Posts
+  </h1>
+  <div>
+    <div
+      style={
+        Object {
+          "float": "left",
+          "width": "50%",
+        }
+      }
+    >
+      <ul>
+        <li
+          key="1"
+          style={
+            Object {
+              "border": "1px solid grey",
+            }
+          }
+        >
+          <Post
+            onClick={[Function]}
+            post={
+              Object {
+                "id": 1,
+                "title": "Some Title",
+              }
+            }
+          />
+        </li>
+      </ul>
+    </div>
+    <div
+      style={
+        Object {
+          "border": "1px solid grey",
+          "float": "right",
+          "marginLeft": 20,
+          "width": "40%",
+        }
+      }
+    >
+      <InfoPost
+        post={
+          Object {
+            "body": "",
+            "id": 1,
+            "title": "",
+          }
+        }
+      />
+    </div>
+  </div>
+</Fragment>
+`;
