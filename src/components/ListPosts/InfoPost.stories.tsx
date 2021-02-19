@@ -7,6 +7,4 @@ export default {
   title: 'ListPosts'
 }
 
-export const ListPostsStory = () => [
-  <ListPosts key='jsx' />
-]
+export const ListPostsStory = () => <ListPosts />

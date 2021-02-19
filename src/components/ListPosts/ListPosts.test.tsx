@@ -18,18 +18,20 @@ describe('ListPosts', () => {
     }
   }
 
+  beforeEach(() => {
+    wrapper.setState(initialState);
+  })
+
   const wrapper = shallow(<ListPosts />)
   it('layout dom elements (snapshot', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
-  it('initial state of component', () => {
-    wrapper.setState(initialState);
+  it('initial state of component', () => {    
     expect(wrapper.state()).toEqual(initialState);
   })
 
   it('exist Post component', () => {
-    wrapper.setState(initialState);
     expect(wrapper.find('Post')).toHaveLength(initialState.posts.length);
   })
   it('exist InfoPost component', () => {
