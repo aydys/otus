@@ -25,7 +25,7 @@ export type SomeArray = Array<number | string>;
 
 export const originalArrayToExpectedArray = (originalArray: SomeArray): SomeArray => {
   const copyOriginal = [].concat(originalArray)
-  return (["two"] as SomeArray).concat(copyOriginal.slice(-2), 5);
+  return ["two", ...copyOriginal.slice(-2), 5];
 };
 
 // Задание 3

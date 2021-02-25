@@ -40,7 +40,7 @@ export type QsObj = Record<string, string | number | boolean | object>;
 );
 
 // Задание 3
-const createPair = (str: string) : any[] => (
+const createPair = (str: string) : string[] => (
   str.split('=')
 )
 
